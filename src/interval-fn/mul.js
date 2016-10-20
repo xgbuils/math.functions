@@ -18,10 +18,13 @@ module.exports = function (a, b) {
         })
     })
 
-    return [min, max]
+    return limitComparator(min, max) > 0 ? [
+        point(0, 0),
+        point(0, 0)
+    ] : [min, max]
 }
 
-function point (value, limit, force) {
+function point (value, limit) {
     return {
         value: value,
         limit: limit

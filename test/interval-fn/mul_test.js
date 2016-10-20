@@ -28,6 +28,12 @@ describe('intervalMul', function () {
         assert.deepEqual(result, samples['{0}'])
     })
 
+    it('if some interval is {0} and the other is an open interval, product returns {0}', function () {
+        var result = intervalMul(samples['{0}'], samples['(2, 8)'])
+        // in chai 0 !== -0
+        assert.deepEqual(result, samples['{0}'])
+    })
+
     it('product of positive and negative interval returns correct interval', function () {
         var result = intervalMul(samples['[1, 2)'], samples['[-4, -2)'])
         // in chai 0 !== -0
