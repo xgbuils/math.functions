@@ -15,12 +15,36 @@ module.exports = {
         limit: 0
     }],
 
+    '[-6, -2]': [{
+        value: -6,
+        limit: 0
+    }, {
+        value: -2,
+        limit: 0
+    }],
+
+    '(-6, 6)': [{
+        value: -6,
+        limit: 1
+    }, {
+        value: 6,
+        limit: -1
+    }],
+
     '[-4, -2)': [{
         value: -4,
         limit: 0
     }, {
         value: -2,
         limit: -1
+    }],
+
+    '[-4, -2]': [{
+        value: -4,
+        limit: 0
+    }, {
+        value: -2,
+        limit: 0
     }],
 
     '[-4, 2)': [{
@@ -39,11 +63,27 @@ module.exports = {
         limit: -1
     }],
 
+    '[-2, 0]': [{
+        value: -2,
+        limit: 0
+    }, {
+        value: 0,
+        limit: 0
+    }],
+
     '[-1, 2)': [{
         value: -1,
         limit: 0
     }, {
         value: 2,
+        limit: -1
+    }],
+
+    '(-1, 10)': [{
+        value: -1,
+        limit: 1
+    }, {
+        value: 10,
         limit: -1
     }],
 

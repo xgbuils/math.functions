@@ -6,7 +6,7 @@ var samples = require('../interval-samples')
 var intervalMul = require('../../src/interval-fn/mul')
 
 describe('intervalMul', function () {
-    it('product of positive intervals returns correct interval', function () {
+    it('product of open intervals returns open interval', function () {
         var result = intervalMul(samples['[1, 2)'], samples['(2, 4]'])
         expect(result).to.be.deep.equal(samples['(2, 8)'])
     })
